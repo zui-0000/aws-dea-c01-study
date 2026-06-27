@@ -6,6 +6,7 @@
 - [ストリーミング処理とバッチ処理](./00_concepts/ストリーミング処理とバッチ処理.md)
 - [データレイク](./00_concepts/データレイク.md)
 - [ETLとELT](./00_concepts/ETLとELT.md)
+- [Zero-ETL](./00_concepts/Zero-ETL.md)
 
 ## 試験ドメインと出題比率
 
