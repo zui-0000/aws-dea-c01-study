@@ -8,7 +8,7 @@
 Kinesis Data Streams との違いは「**自分でコンシューマーを実装しなくていい**」こと。
 設定するだけで自動的にデータが配信先に届く。
 
-→ Kinesis Data Streams との詳細比較は [Amazon Kinesis Data Streams](./Amazon_Kinesisデータストリーム.md) を参照。
+→ Kinesis Data Streams との詳細比較は [Amazon Kinesis Data Streams](./Amazon_Kinesis_Data_Streams.md) を参照。
 
 ---
 
