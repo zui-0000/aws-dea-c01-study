@@ -7,6 +7,7 @@
 - [データレイク](./00_concepts/データレイク.md)
 - [ETLとELT](./00_concepts/ETLとELT.md)
 - [Zero-ETL](./00_concepts/Zero-ETL.md)
+- [イベントソースマッピング](./00_concepts/イベントソースマッピング.md)
 
 ## 試験ドメインと出題比率
 

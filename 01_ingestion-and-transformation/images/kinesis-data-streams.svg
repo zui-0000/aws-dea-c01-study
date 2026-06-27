@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="Arial, sans-serif">
+
+  <!-- 背景 -->
+  <rect width="780" height="340" fill="#f8f9fa" rx="12"/>
+
+  <!-- タイトル -->
+  <text x="390" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#232f3e">Amazon Kinesis Data Streams</text>
+
+  <!-- ===== プロデューサー ===== -->
+  <rect x="20" y="55" width="160" height="250" fill="#e8f4f8" rx="8" stroke="#5a9ec9" stroke-width="1.5"/>
+  <text x="100" y="76" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a5276">プロデューサー</text>
+
+  <!-- EC2 -->
+  <rect x="40" y="90" width="120" height="36" fill="#ff9900" rx="6"/>
+  <text x="100" y="113" text-anchor="middle" font-size="12" fill="white" font-weight="bold">EC2 / Lambda</text>
+
+  <!-- IoT -->
+  <rect x="40" y="140" width="120" height="36" fill="#ff9900" rx="6"/>
+  <text x="100" y="163" text-anchor="middle" font-size="12" fill="white" font-weight="bold">IoTデバイス</text>
+
+  <!-- Mobile -->
+  <rect x="40" y="190" width="120" height="36" fill="#ff9900" rx="6"/>
+  <text x="100" y="213" text-anchor="middle" font-size="12" fill="white" font-weight="bold">モバイルアプリ</text>
+
+  <!-- Click -->
+  <rect x="40" y="240" width="120" height="36" fill="#ff9900" rx="6"/>
+  <text x="100" y="263" text-anchor="middle" font-size="12" fill="white" font-weight="bold">クリックストリーム</text>
+
+  <!-- ===== 矢印（プロデューサー → KDS） ===== -->
+  <line x1="180" y1="180" x2="238" y2="180" stroke="#5a9ec9" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="209" y="170" text-anchor="middle" font-size="10" fill="#1a5276">Put</text>
+
+  <!-- ===== Kinesis Data Streams ===== -->
+  <rect x="240" y="55" width="300" height="250" fill="#e6f0ff" rx="8" stroke="#2e6da4" stroke-width="2"/>
+  <text x="390" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a3a6b">Kinesis Data Streams</text>
+
+  <!-- シャード1 -->
+  <rect x="265" y="92" width="250" height="46" fill="#2e6da4" rx="6"/>
+  <text x="390" y="111" text-anchor="middle" font-size="12" fill="white" font-weight="bold">シャード 1</text>
+  <text x="390" y="128" text-anchor="middle" font-size="10" fill="#cce0ff">1MB/秒 書込 ／ 2MB/秒 読取</text>
+
+  <!-- シャード2 -->
+  <rect x="265" y="152" width="250" height="46" fill="#2e6da4" rx="6"/>
+  <text x="390" y="171" text-anchor="middle" font-size="12" fill="white" font-weight="bold">シャード 2</text>
+  <text x="390" y="188" text-anchor="middle" font-size="10" fill="#cce0ff">1MB/秒 書込 ／ 2MB/秒 読取</text>
+
+  <!-- シャード3 -->
+  <rect x="265" y="212" width="250" height="46" fill="#2e6da4" rx="6"/>
+  <text x="390" y="231" text-anchor="middle" font-size="12" fill="white" font-weight="bold">シャード 3</text>
+  <text x="390" y="248" text-anchor="middle" font-size="10" fill="#cce0ff">1MB/秒 書込 ／ 2MB/秒 読取</text>
+
+  <!-- 保持期間ラベル -->
+  <rect x="275" y="268" width="230" height="26" fill="#d4e6f1" rx="4"/>
+  <text x="390" y="285" text-anchor="middle" font-size="11" fill="#1a3a6b">保持期間: デフォルト24時間（最大365日）</text>
+
+  <!-- ===== 矢印（KDS → コンシューマー） ===== -->
+  <line x1="540" y1="180" x2="598" y2="180" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="569" y="170" text-anchor="middle" font-size="10" fill="#1e8449">Get</text>
+
+  <!-- ===== コンシューマー ===== -->
+  <rect x="600" y="55" width="160" height="250" fill="#e8f8ee" rx="8" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="680" y="76" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e5631">コンシューマー</text>
+
+  <!-- Lambda -->
+  <rect x="620" y="90" width="120" height="36" fill="#27ae60" rx="6"/>
+  <text x="680" y="113" text-anchor="middle" font-size="12" fill="white" font-weight="bold">AWS Lambda</text>
+
+  <!-- Firehose -->
+  <rect x="620" y="140" width="120" height="36" fill="#27ae60" rx="6"/>
+  <text x="680" y="158" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Kinesis</text>
+  <text x="680" y="172" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Firehose</text>
+
+  <!-- EMR -->
+  <rect x="620" y="190" width="120" height="36" fill="#27ae60" rx="6"/>
+  <text x="680" y="213" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Amazon EMR</text>
+
+  <!-- Flink -->
+  <rect x="620" y="240" width="120" height="36" fill="#27ae60" rx="6"/>
+  <text x="680" y="258" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Managed</text>
+  <text x="680" y="272" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Flink</text>
+
+  <!-- ===== 矢印マーカー定義 ===== -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#5a9ec9"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+
+</svg>
