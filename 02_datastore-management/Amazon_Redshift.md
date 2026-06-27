@@ -1,4 +1,4 @@
-# Amazon Redshift
+# <img src="./images/aws-amazon-redshift.webp" width="36"/>&nbsp;&nbsp; Amazon Redshift
 
 ## 概要
 
