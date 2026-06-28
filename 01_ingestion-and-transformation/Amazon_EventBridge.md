@@ -115,6 +115,29 @@ EventBridge（Glue失敗）   → Lambda → Slack通知
 
 ---
 
+## EventBridge Scheduler
+
+**2022年11月GAの専用スケジューリング機能**。タスクの定期実行・1回限り実行に特化する。
+
+従来の scheduled rule（cron / rate ルール）に比べ、以下の利点がある。
+
+| 観点 | scheduled rule（旧） | EventBridge Scheduler |
+|------|---------------------|----------------------|
+| タイムゾーン | 非対応（UTC基準） | 対応（タイムゾーン・DST考慮） |
+| 1回限りスケジュール | できない | できる（one-time） |
+| スケール | ルール数に上限 | 数百万タスクへスケール |
+| 再試行 | 限定的 | 柔軟な再試行・DLQ設定が可能 |
+
+```
+スケジュールタスク（定期実行・1回限り実行）
+→ 現在は EventBridge Scheduler の利用が推奨
+→ 旧 scheduled rule（cron/rate ルール）はレガシー扱い
+```
+
+- イベント駆動の連携（イベントバス・ルール・Pipes）は引き続き従来どおり使う。Schedulerはあくまで「時刻起点の実行」に特化した機能。
+
+---
+
 ## Kinesis・SQSとの違い
 
 どれも「イベント・メッセージを扱う」サービスだが用途が違う。
@@ -129,7 +152,7 @@ EventBridge（Glue失敗）   → Lambda → Slack通知
 
 ## 試験のポイント
 
-- **定期実行（cron・rate）** → EventBridgeスケジュール
+- **定期実行（cron・rate）** → EventBridgeスケジュール。**定期実行・1回限り実行は EventBridge Scheduler が推奨**（タイムゾーン対応・大規模スケール・柔軟な再試行。旧 scheduled rule はレガシー扱い）
 - **AWSサービスの変化に反応** → EventBridgeイベントルール
 - **S3ファイル到着 → Lambda起動** → EventBridgeのS3イベント（またはS3トリガー）
 - **Glue/Batchの失敗通知** → EventBridge → SNS/Lambda

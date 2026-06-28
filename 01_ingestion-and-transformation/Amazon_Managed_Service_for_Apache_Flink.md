@@ -3,9 +3,15 @@
 ## 概要
 
 ストリーミングデータを**リアルタイムで分析・変換・集計**するフルマネージドサービス。
-以前は「Kinesis Data Analytics」という名前だったが現在は改名。
+以前は「Kinesis Data Analytics」（厳密には Kinesis Data Analytics for Apache Flink）という名前だったが現在は改名。
+
+なお、旧 **Kinesis Data Analytics for SQL** はこれとは別系統のサービスで、現在は新規利用が制限されており、Apache Flink ベースの本サービスへの移行が推奨されている。
 
 Apache Flink というオープンソースのストリーム処理エンジンをAWSがマネージドで提供している。
+
+### 対応 Apache Flink バージョン
+
+2026年時点で **1.20 / 1.19 / 1.18 / 1.15** をサポート（1.20 は 2024年9月に対応。Flink 1.x 系の LTS）。加えて、メジャーバージョンの **2.2** もサポートされている。
 
 ```
 Kinesis Data Streams / MSK（Kafka）

@@ -32,6 +32,9 @@ Kinesis Data Streams との違いは「**自分でコンシューマーを実装
 ├── Amazon S3（最も一般的）
 ├── Amazon Redshift
 ├── Amazon OpenSearch Service
+├── Apache Iceberg Tables
+├── Amazon S3 Tables
+├── Snowflake
 └── サードパーティ（Datadog, Splunk など）
 ```
 

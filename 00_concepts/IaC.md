@@ -177,10 +177,10 @@ AWSにデプロイ
 ### SAM で使える主なランタイム（2026年6月時点）
 
 ```
-Python    3.9 / 3.10 / 3.11 / 3.12 / 3.13
-Node.js   20.x / 22.x / 24.x      ← TypeScript もここで動く（18.x はEOL済み）
+Python    3.9 / 3.10 / 3.11 / 3.12 / 3.13   ← 新規は 3.12 / 3.13 推奨（3.9 は近くEOL段階）
+Node.js   20.x / 22.x / 24.x                ← TypeScript もここで動く（18.x はEOL済み）
 Java      8 / 11 / 17 / 21
-.NET      6 / 8
+.NET      8 / 9                              ← .NET 6 は2024年12月にdeprecation（EOL）済み
 Ruby      3.2 / 3.3
 ```
 

@@ -13,11 +13,14 @@
 |---------|------|------|
 | **Snowball Edge Storage Optimized** | ✅ アクティブ（既存顧客のみ） | 210TB NVMe |
 | **Snowball Edge Compute Optimized** | ✅ アクティブ（既存顧客のみ） | 104 vCPU・28TB NVMe |
-| ~~Snowcone~~ | ❌ 2024年11月終了 | 廃止済み |
-| ~~Snowmobile~~ | ❌ 2025年に廃止 | 廃止済み |
+| ~~Snowcone~~ | ❌ 2024年11月12日に販売終了 | 既存顧客サポートは2025年11月12日まで |
+| ~~Snowmobile~~ | ❌ 2024年4月に提供停止を表明 | ウェブサイトからの削除は2024年3月 |
 
-> **注意:** 2025年11月7日以降、Snowball Edgeは新規顧客への提供が終了し、**既存顧客のみ**利用可能。
+> **注意:** Snowball Edgeは**新規顧客には提供終了済み**（2025年11月7日以降、既存顧客のみ利用可能）。
 > 新規顧客はAWS DataSync・AWS Data Transfer Terminalの利用が推奨されている。
+> エッジコンピューティング用途の代替は **AWS Outposts**。
+
+> **旧世代デバイスの販売終了:** Snowball Edge Storage Optimized 80TB、Compute Optimized 52 vCPU、Compute Optimized with GPU の3モデルは **2024年11月12日に販売終了**。
 
 ---
 
@@ -76,13 +79,15 @@ vCPU: 104
 
 ## 廃止されたサービス（参考）
 
-### Snowcone（2024年11月廃止）
+### Snowcone（2024年11月12日に販売終了）
 - 最小・最軽量のSnowデバイス（8TB HDD / 14TB SSD）
-- 辺境地・IoT用途向けだったが廃止に
+- 辺境地・IoT用途向けだった
+- 2024年11月12日に販売終了（新規・既存とも注文不可）。既存顧客のサポートは2025年11月12日まで
 
-### Snowmobile（2025年廃止）
+### Snowmobile（2024年4月に提供停止を表明）
 - 45フィートのトレーラートラック
-- 最大100PBの超大規模転送向けだったが廃止に
+- 最大100PBの超大規模転送向けだった
+- 2024年4月にAWSが提供停止を表明（ウェブサイトからの削除は2024年3月）
 - 代替: Snowball Edgeを複数台使う
 
 ---
@@ -91,6 +96,8 @@ vCPU: 104
 
 - **大量データをオフラインで転送** → Snowball Edge
 - **ネットワーク転送が現実的でない規模** → Snowball Edge
-- **Snowcone・Snowmobileは廃止済み** → 試験では古い問題に注意
-- **新規顧客はDataSyncを推奨** → AWSの公式推奨の方向性
-- **エッジコンピューティング** → Snowball Edge Compute Optimized
+- **Snowmobile** → 2024年4月に提供停止を表明（ウェブサイト削除は2024年3月）
+- **Snowcone** → 2024年11月12日に販売終了（既存顧客サポートは2025年11月12日まで）
+- **Snowball Edge** → 新規顧客には提供終了済み（2025年11月7日以降、既存顧客のみ）
+- **新規顧客の代替** → オンライン転送はDataSync、物理転送はData Transfer Terminal、エッジコンピューティングはAWS Outposts
+- **エッジコンピューティング** → Snowball Edge Compute Optimized（新規はAWS Outposts）

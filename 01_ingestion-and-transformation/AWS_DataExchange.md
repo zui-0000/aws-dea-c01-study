@@ -34,6 +34,28 @@ Amazon S3 → Athena / Redshift で分析
 
 ---
 
+## 対応するデータの受け取り形態
+
+受け取り形態はS3配信だけではなく、複数の形態に対応している。
+
+| 形態 | 説明 |
+|------|------|
+| **Files** | ファイル単位でのデータセット |
+| **API** | APIアクセスで直接データを取得 |
+| **Amazon Redshift** | Redshiftで直接クエリ（データシェア経由） |
+| **Amazon S3** | S3バケットへの配信 |
+| **AWS Lake Formation**（プレビュー） | Lake Formation経由でのアクセス |
+
+```
+用途に応じて受け取り形態を選択
+├── Files / Amazon S3 → ファイル・オブジェクトとして受領
+├── API             → アプリからAPIで直接取得
+├── Amazon Redshift → DWHで直接クエリ
+└── AWS Lake Formation（プレビュー）
+```
+
+---
+
 ## データの種類
 
 | カテゴリ | 例 |
@@ -128,7 +150,7 @@ AppFlowと違い、**Terraformサポートは限定的**。
 ## 試験のポイント
 
 - **外部のサードパーティデータを利用したい** → AWS Data Exchange
-- **データはS3に自動配信** → そのままAthena・Redshiftで分析可能
+- **受け取り形態は複数** → Files / API / Amazon Redshift / Amazon S3 / AWS Lake Formation（プレビュー）。S3配信のほか、Redshiftで直接クエリ・APIアクセスも可能
 - **サブスクリプションモデル** → 購入したデータは自動更新される
 - **AppFlowとの違い** → Data Exchangeは外部データの購入、AppFlowは自社SaaS連携
 - **データプロバイダーとしても使える** → 自社データの販売も可能

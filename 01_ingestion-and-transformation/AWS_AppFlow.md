@@ -11,13 +11,16 @@ SaaSアプリ（データ送信元）
 ├── Slack
 ├── ServiceNow
 ├── Zendesk
-├── Google Analytics
+├── Google Analytics（GA4 / Google Analytics 4 対応）
 └── SAP など
         ↓ Amazon AppFlow（ノーコードで連携）
 AWS サービス（データ送信先）
 ├── Amazon S3
 ├── Amazon Redshift
 ├── Amazon EventBridge
+├── Amazon RDS for PostgreSQL
+├── Amazon SageMaker（Data Wrangler）
+├── Snowflake
 └── Salesforce（双方向も可）
 ```
 
